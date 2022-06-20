@@ -1,0 +1,140 @@
+.login {
+
+  &__wrapper {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: none;
+  }
+  .active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    background: rgba(0, 0, 0, .7);
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    background: #000;
+    right: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    height: 40px;
+    color: #fff;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__container {
+    width: 40%;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 90%;
+    }
+  }
+
+  &__form-container {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    background: #242424;
+    min-height: 400px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    background: none;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__button-title {
+    padding-left: 7px;
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    background: #262626;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 160px;
+  }
+
+
+}
+.panel-wrapper {
+  position: relative;
+}
+
+.profile-menu {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  background: #262626;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding-bottom: 5px;
+  }
+
+  &__link {
+    color: #fff;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  &__button {
+    height: 40px;
+    border-radius: 5px;
+    width: 80%;
+    background: #777;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      background: #3c3c3c;
+    }
+  }
+}
+

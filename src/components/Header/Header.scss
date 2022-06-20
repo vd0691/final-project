@@ -1,0 +1,87 @@
+
+.header {
+  background: #000;
+
+  &__container {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__block--left {
+    flex-grow: 1;
+
+  }
+
+  &__search {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__search-input {
+    height: 40px;
+    width: 0px;
+    opacity: 0;
+  }
+  &__search-input--active {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    background: #565656;
+    border: none;
+    opacity: 1;
+    animation-duration: 0.8s;
+    animation-name: slidein;
+    color: #fff;
+    padding: 10px;
+  }
+
+
+  &__search-icon {
+    background: none;
+    position: absolute;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:active {
+      border-style: none;
+    }
+
+  }
+  &__mobile-nav {
+    background: none;
+    display: none;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+
+  @keyframes slidein {
+    from {
+      width: 0%;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+}
